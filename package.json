@@ -1,0 +1,27 @@
+{
+  "name": "bug",
+  "version": "1.0.0",
+  "description": "Possible bug",
+  "author": "Martin Artola",
+  "license": "ISC",
+  "sideEffects": true,
+  "devDependencies": {
+    "@babel/core": "7.12.3",
+    "@babel/plugin-transform-runtime": "7.15.0",
+    "@babel/preset-env": "7.15.0",
+    "@babel/runtime": "7.12.1",
+    "babel-loader": "8.2.2",
+    "babel-plugin-relay": "11.0.2",
+    "graphql": "15.4.0",
+    "relay-compiler": "11.0.2",
+    "relay-config": "11.0.2",
+    "relay-runtime": "11.0.2",
+    "rimraf": "3.0.2",
+    "webpack": "5.51.1",
+    "webpack-cli": "4.8.0"
+  },
+  "scripts": {
+    "prebuild": "clear & rimraf dist & rimraf node_modules/.cache",
+    "build": "relay-compiler && webpack --mode=production"
+  }
+}
